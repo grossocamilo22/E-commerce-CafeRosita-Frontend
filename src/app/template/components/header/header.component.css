@@ -1,11 +1,10 @@
-.header {
+.header-content {
     position: sticky;
     display: flex;
+    height: 100%;
     justify-content: space-between;
-    background-color: #FBEED5;
     align-items: center;
-    height: 80px;
-    padding: 5px 8%;
+    padding: 5px 4%;
 }
 
 ul {
@@ -13,7 +12,7 @@ ul {
     margin: 0;
 }
 
-.header .logo {
+.header-content .logo {
     cursor: pointer;
 
     & img {
@@ -24,7 +23,7 @@ ul {
 }
 
 
-.header .nav-links {
+.header-content .nav-links {
     list-style: none;
 
     & li {
@@ -32,7 +31,7 @@ ul {
         align-items: center;
         height: 35px;
         padding: 0px 30px;
-        border-bottom: 1px solid #FBEED5;
+        border-bottom: 0.16em solid #FBEED5;
         transition: all 0.7s ease-in-out;
 
         & a {
@@ -45,9 +44,9 @@ ul {
 }
 
 
-.header .nav-links li:hover {
+.header-content .nav-links li:hover {
     cursor: pointer;
-    border-bottom: solid 1px brown;
+    border-bottom: solid 0.16em brown;
 
     & a {
         color: brown;
@@ -56,7 +55,7 @@ ul {
 
 
 
-.header .end-nav {
+.header-content .end-nav {
     display: flex;
     gap: 20px;
 
@@ -91,6 +90,8 @@ ul {
     & .end-btn {
         height: 35px;
         border: none;
+        display: flex;
+        align-items: center;
         background-color: inherit;
         font-size: 25px;
     }
