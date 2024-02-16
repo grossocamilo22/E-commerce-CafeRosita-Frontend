@@ -3,6 +3,12 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomePagesComponent } from './modules/home/pages/home-pages/home-pages.component';
 
 const routes: Routes = [
+
+  {
+    path: 'auth',
+    loadChildren: () => import('./modules/auth/auth.module').then(m => m.AuthModule),
+    title:'auth'
+  },
   {
   path:'',
   component:HomePagesComponent,

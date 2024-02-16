@@ -3,10 +3,10 @@
         <img src="../../../assets/images/logo.png" alt="logo">
     </div>
     <nav>
-        <ul class="nav-links">
-            <li><a >section 1</a></li>
-            <li><a >section 2</a></li>
-            <li><a >section 3</a></li>
+        <ul class="nav-links" [ngClass]="{'hidden-nav-links':hiddeNavLinks}">
+            @for (item of listItemsNavLinks; track item.name) {
+                <li><a routerLink="/{{item.link}}">{{item.name}}</a><span class="links-line"></span></li>
+              }
         </ul>
     </nav>
     <div class="end-nav">
@@ -14,7 +14,9 @@
             <mat-icon class="search">search</mat-icon>
             <input type="text" class="search-input" placeholder="Buscar producto">
         </div>
-        <a ><button class="end-btn" matTooltip="Basic"><mat-icon>shopping_cart</mat-icon></button></a>
-        <a ><button class="end-btn" matTooltip="Basic"><mat-icon>shopping_cart</mat-icon></button></a>
+        <a routerLink="/auth" routerLinkActive="active"><button class="end-btn"
+                matTooltip="Basic"><mat-icon>shopping_cart</mat-icon></button></a>
+        <a routerLink="/auth" routerLinkActive="active"><button class="end-btn"
+                matTooltip="Login"><mat-icon>person</mat-icon></button></a>
     </div>
 </header>

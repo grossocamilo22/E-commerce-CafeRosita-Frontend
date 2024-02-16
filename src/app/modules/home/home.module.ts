@@ -5,18 +5,21 @@ import { HomeRoutingModule } from './home-routing.module';
 import { HomePagesComponent } from './pages/home-pages/home-pages.component';
 import { SharedModule } from '../../shared/shared.module';
 import { MainTemplateComponent } from '../../template/pages';
+import { SearchComponent } from './Components/search/search.component';
 
 
 
 @NgModule({
   declarations: [
-    HomePagesComponent
+    HomePagesComponent,
+    
   ],
   imports: [
     CommonModule,
     HomeRoutingModule,
     SharedModule,
-    MainTemplateComponent
+    MainTemplateComponent,
+    SearchComponent
   ]
 })
 export class HomeModule { }

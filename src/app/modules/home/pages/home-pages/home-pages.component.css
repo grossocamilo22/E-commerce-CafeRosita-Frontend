@@ -1,0 +1,41 @@
+.modal-window {
+    background-color: black;
+    color: white;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0.5;
+    z-index: 99;
+    display: block;
+
+    
+}
+
+.search-product {
+    top: 0;
+    position: sticky;
+    display: block;
+    opacity: 1;
+    z-index: 100;
+ }
+
+
+
+.app-main-template {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    z-index: 98;
+}
+
+.open-modal {
+    display: block;
+    z-index: 99;
+
+    & .open-search-product{
+    top:0;
+    }
+}

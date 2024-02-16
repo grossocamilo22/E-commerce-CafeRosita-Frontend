@@ -4,7 +4,6 @@
 html {
     box-sizing: border-box;
     font-size: 16px;
-    background-color: #FBEED5;
 }
 
 *,
@@ -17,3 +16,11 @@ html {
 }
 
 
+
+.mdc-text-field--filled:not(.mdc-text-field--disabled) {
+    background-color: white !important;
+}
+
+.mat-mdc-form-field-focus-overlay {
+    background-color: transparent !important;
+}

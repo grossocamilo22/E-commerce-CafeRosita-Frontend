@@ -1,5 +1,5 @@
+
 .grid-areas {
-    height: 100vh;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 75px 1fr 130px;
@@ -9,6 +9,8 @@
         "footer";
 
     & .header {
+        top: 0;
+        position: sticky;
         grid-area: header;
         background-color: #FBEED5;
     }

@@ -1,5 +1,6 @@
 .footer-content {
   height: 100%;
+  width: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -22,5 +23,6 @@
 
   & .company-information{
   text-align: center;
+  color: white;
   }
 }

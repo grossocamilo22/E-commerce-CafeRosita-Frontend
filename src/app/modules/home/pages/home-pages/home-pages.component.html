@@ -1,1 +1,4 @@
-<app-main-template/>
+<app-search-product class="search-product" [ngClass]="{'open-search-product':openSearchComponent}" />
+<section class="modal-window" [ngClass]="{'open-modal':openModalSearchProduct}">
+</section>
+<app-main-template class="app-main-template"/>
