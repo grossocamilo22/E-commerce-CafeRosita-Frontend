@@ -1,8 +1,10 @@
 
 .grid-areas {
+    position: relative;
     display: grid;
+    background-color: #FBEED5;;;
     grid-template-columns: 1fr;
-    grid-template-rows: 75px 1fr 130px;
+    grid-template-rows: 12vh 1fr 130px;
     grid-template-areas:
         "header"
         "content"
@@ -12,7 +14,8 @@
         top: 0;
         position: sticky;
         grid-area: header;
-        background-color: #FBEED5;
+        background-color: inherit;
+        z-index: 999;
     }
 
     & .footer {
@@ -22,6 +25,6 @@
 
     & .content {
         grid-area: content;
-        background-color: #FBEED5;
+        background-color: inherit;
     }
 }

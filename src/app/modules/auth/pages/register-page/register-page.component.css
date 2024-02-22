@@ -1,0 +1,90 @@
+.register-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FBEED5;
+    height: 100vh;
+
+    & .register-content {
+        background-color: white;
+        position: relative;
+        display: grid;
+        padding: 2em 1.5em;
+        max-width: 550px;
+        width: 100%;
+        margin: 16px;
+        border-radius: 10px;
+        box-shadow: 0 5px 10px -5px maroon;
+        text-align: center;
+        gap: 2em;
+        --size: 38px;
+
+        & .form-title {
+            color: rgb(145, 80, 64);
+            font-size: 2rem;
+            margin-bottom: 0.5em;
+        }
+
+        & .back-register-options-btn {
+            position: absolute;
+            text-align: center;
+            left: 0;
+            top: 0;
+            margin: 12px;
+            border: solid 1px rgb(145, 80, 64);
+            border-radius: 25px;
+            color: rgb(145, 80, 64);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: inherit;
+            height: var(--size);
+            width: var(--size);
+            visibility: hidden;
+        }
+
+        & .back-register-options-btn:hover {
+            color: gray;
+            border: solid 1px gray;
+        }
+
+        & .back-register-options-btn-active {
+            visibility: visible;
+        }
+
+        & .form-paragraph {
+            font-weight: 300;
+
+            & .form-link {
+                font-weight: 400;
+                color: maroon;
+            }
+        }
+
+        & .register-options-content {
+            display: block;
+        }
+
+        & .register-form-content {
+            display: none;
+            position: absolute;
+            top: 0;
+            visibility: hidden;
+            transition: visibility 0.7s ease-in;
+        }
+
+        & .register-options-content-active {
+            display: none;
+        }
+        
+        & .register-form-content-active {
+            display: block;
+            visibility: visible;
+            position: relative;
+        }
+
+        
+
+    }
+}
+

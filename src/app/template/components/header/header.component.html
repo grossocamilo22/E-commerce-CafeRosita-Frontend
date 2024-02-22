@@ -5,15 +5,12 @@
     <nav>
         <ul class="nav-links" [ngClass]="{'hidden-nav-links':hiddeNavLinks}">
             @for (item of listItemsNavLinks; track item.name) {
-                <li><a routerLink="/{{item.link}}">{{item.name}}</a><span class="links-line"></span></li>
-              }
+            <li><a routerLink="/{{item.link}}">{{item.name}}</a><span class="links-line"></span></li>
+            }
         </ul>
     </nav>
     <div class="end-nav">
-        <div class="search-file">
-            <mat-icon class="search">search</mat-icon>
-            <input type="text" class="search-input" placeholder="Buscar producto">
-        </div>
+        <a><button class="end-btn" matTooltip="Buscar" (click)="openModalSearchProduct()"><mat-icon>search</mat-icon></button></a>
         <a routerLink="/auth" routerLinkActive="active"><button class="end-btn"
                 matTooltip="Basic"><mat-icon>shopping_cart</mat-icon></button></a>
         <a routerLink="/auth" routerLinkActive="active"><button class="end-btn"

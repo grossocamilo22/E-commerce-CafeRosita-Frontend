@@ -1,6 +1,44 @@
 .home {
-    background: url("/assets/images/fondoPrincipal.png");
+    background-color: antiquewhite;
+    background-image: url("/assets/images/fondoPrincipal.png");
+    min-height: 88vh;
+    display: flex;
+    justify-content: left;
+    /* align-items: center; */
+    background-size: cover;
     background-repeat: no-repeat;
-    min-height: 100vh;
-    width: auto;
+    background-position: bottom right;
+
+
+    & .home-text {
+        /* display: flex;
+        flex-direction: column;
+        justify-content: center; */
+        width: 40%;
+        height: auto;
+        padding: 5em 3em 0px;
+        font-size: 0.938rem;
+        color: rgb(145, 80, 64);
+        margin: 0.5rem 0 1.4rem;
+
+        & .btn-principal {
+            padding: 10px 40px;
+            border-radius: 0.3rem;
+            background: rgb(145, 80, 64);
+            color: white;
+            font-weight: 500;
+        }
+
+        & .btn-principal:hover {
+            background: #8a6f4d;
+        }
+    }
+}
+
+@media (min-width: 818px) and (max-width:1110px) {
+
+    .home {
+        background-position: bottom center;
+    }
+
 }

@@ -8,7 +8,6 @@ import { map } from 'rxjs';
   styleUrl: './home-pages.component.css'
 })
 export class HomePagesComponent implements OnInit {
-  openSearchComponent: boolean = false;
   openModalSearchProduct:boolean = false;
   constructor() {
   }

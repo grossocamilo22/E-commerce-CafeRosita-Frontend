@@ -1,6 +1,7 @@
 .header-content {
+    position: relative;
     height: 100%;
-    width: auto;
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -15,7 +16,7 @@ ul {
 
 .header-content .logo {
     cursor: pointer;
-
+    color: black;
     & img {
         height: 60px;
         width: auto;
@@ -27,6 +28,7 @@ ul {
 .header-content .nav-links {
     list-style: none;
     display: flex;
+    flex-wrap: wrap;
     gap: 35px;
     & li {
         position: relative;
@@ -79,34 +81,6 @@ ul {
 .header-content .end-nav {
     display: flex;
     gap: 20px;
-
-    & .search-file {
-        position: relative;
-
-        & .search {
-            position: absolute;
-            left: 10px;
-            top: 6px;
-            font-size: 25px;
-        }
-
-        & .search-input {
-            height: 35px;
-            border-radius: 25px;
-            padding: 5px 0 5px 35px;
-            border: solid 2px white;
-            background-color: white;
-            transition: border 0.7s ease-in;
-
-        }
-
-        & .search-input:focus {
-            outline: none;
-            border: solid 2px rgb(145, 80, 64);
-        }
-
-
-    }
 
     & .end-btn {
         height: 35px;

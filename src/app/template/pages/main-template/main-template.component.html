@@ -1,8 +1,8 @@
 <section class="grid-areas">
-    <app-header class="header" />
-    <!--  <app-sidenav class="sidenav" /> -->
+    <app-header class="header" (openmodal)="getValueModalSearchProduct($event)"/>
     <div class="content">
         <router-outlet />
     </div>
+    <!--  <app-sidenav class="sidenav" /> -->
     <app-footer class="footer" />
 </section>

@@ -1,41 +1,39 @@
 .modal-window {
     background-color: black;
-    color: white;
     position: fixed;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
-    opacity: 0.5;
-    z-index: 99;
-    display: block;
+    background-color: rgba(0, 0, 0, 0.5);
 
-    
+    & .card-search-product {
+        top: -520px;
+        opacity: 0.3;
+        transition: opacity 0.2s ease-in;
+    }
 }
 
-.search-product {
-    top: 0;
-    position: sticky;
-    display: block;
-    opacity: 1;
-    z-index: 100;
- }
-
-
-
 .app-main-template {
+    top: 0;
     position: relative;
     display: block;
     width: 100%;
     height: 100%;
-    z-index: 98;
+    z-index: 999;
+    transition: top 0.4s ease-out;
 }
 
 .open-modal {
-    display: block;
-    z-index: 99;
+    z-index: 1000;
 
-    & .open-search-product{
-    top:0;
+    & .card-search-product {
+        position: relative;
+        top: 0;
+        opacity: 1;
     }
+}
+
+.open-app-main-template {
+    top: 520px;
 }
