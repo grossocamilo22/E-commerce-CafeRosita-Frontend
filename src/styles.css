@@ -1,9 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
-@import url("https://fonts.googleapis.com/css2?family=Urbanist:wght@300&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
 
 html {
     box-sizing: border-box;
     font-size: 16px;
+    --main-color: rgb(145, 80, 64);
+    --font-color: #FBEED5;
 }
 
 *,
@@ -12,8 +14,10 @@ html {
     box-sizing: inherit;
     padding: 0;
     margin: 0;
-    font-family: Roboto, "Helvetica Neue", sans-serif;
-    
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+
 }
 
 .mdc-text-field--filled:not(.mdc-text-field--disabled) {
@@ -21,5 +25,5 @@ html {
 }
 
 .mat-mdc-form-field-focus-overlay {
-    background-color:#FAFAFA !important;
+    background-color: #FAFAFA !important;
 }

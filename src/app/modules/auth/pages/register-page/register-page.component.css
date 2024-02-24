@@ -2,7 +2,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #FBEED5;
+    background-color: var(--font-color);
     height: 100vh;
 
     & .register-content {
@@ -20,7 +20,7 @@
         --size: 38px;
 
         & .form-title {
-            color: rgb(145, 80, 64);
+            color: var(--main-color);
             font-size: 2rem;
             margin-bottom: 0.5em;
         }
@@ -31,9 +31,9 @@
             left: 0;
             top: 0;
             margin: 12px;
-            border: solid 1px rgb(145, 80, 64);
+            border: solid 1px var(--main-color);
             border-radius: 25px;
-            color: rgb(145, 80, 64);
+            color: var(--main-color);
             display: flex;
             justify-content: center;
             align-items: center;

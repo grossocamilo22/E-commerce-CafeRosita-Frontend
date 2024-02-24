@@ -7,6 +7,10 @@ const routes: Routes = [
     loadChildren: () => import('../shop/shop.module').then(m => m.ShopModule)
   },
   {
+    path: 'history',
+    loadChildren:()=> import('../history/history.module').then(m=>m.HistoryModule)
+  },
+  {
     path: '**',//TODO 404 cuando no existe la ruta
     redirectTo: ''
   }

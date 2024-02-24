@@ -98,3 +98,10 @@ ul {
 
 }
 
+@media (min-width: 818px) and (max-width:1110px) {
+
+    .header-content .nav-links {
+        gap: 15px;
+    }
+
+}

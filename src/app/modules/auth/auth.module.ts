@@ -6,7 +6,7 @@ import { LoginPageComponent } from './pages/login-page/login-page.component';
 import { RegisterPageComponent } from './pages/register-page/register-page.component';
 import { MatIconModule } from '@angular/material/icon';
 import { RouterLink, RouterLinkActive } from '@angular/router';
-import { RegisterFormComponent, RegisterOptionsComponent } from './pages/register-page/Components';
+import { RegisterFormComponent, RegisterOptionsComponent } from './Components';
 
 
 @NgModule({
