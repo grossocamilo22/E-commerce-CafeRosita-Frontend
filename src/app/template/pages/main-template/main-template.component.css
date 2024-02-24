@@ -2,7 +2,8 @@
 .grid-areas {
     position: relative;
     display: grid;
-    height: 100vh;
+    min-height: 100vh;
+    width: 100%;
     background-color: var(--font-color);
     grid-template-columns: 1fr;
     grid-template-rows: 12vh 1fr 130px;
@@ -27,5 +28,20 @@
     & .content {
         grid-area: content;
         background-color: inherit;
+        z-index: 997;
     }
+}
+
+
+@media (min-width:80px) and (max-width:1110px) {
+
+    .grid-areas{
+        grid-template-rows: 8vh 1fr 130px;
+        & .header {
+            background-color: var(--main-color);
+            
+    
+        }
+    }
+
 }

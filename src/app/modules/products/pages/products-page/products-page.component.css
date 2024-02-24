@@ -1,0 +1,23 @@
+.products-container{
+position: relative;
+width: auto;
+height: 100%;
+display: flex;
+flex-direction: column;
+align-items: center;
+text-align: center;
+/* color: var(--main-color); */
+font-weight: 500;
+font-style: normal;
+padding: 12px;
+gap: 12px;
+
+    & .products-title{
+        
+        padding: 2em 0px;
+    }
+
+    & .products-content{
+       
+    }
+}

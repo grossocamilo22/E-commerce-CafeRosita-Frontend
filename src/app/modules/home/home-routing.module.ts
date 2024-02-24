@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
-    path: '',
+    path: 'home',
     loadChildren: () => import('../shop/shop.module').then(m => m.ShopModule)
   },
   {
@@ -11,8 +11,12 @@ const routes: Routes = [
     loadChildren:()=> import('../history/history.module').then(m=>m.HistoryModule)
   },
   {
+    path: 'products',
+    loadChildren: ()=> import('../products/products.module').then(m=>m.ProductsModule)
+  },
+  {
     path: '**',//TODO 404 cuando no existe la ruta
-    redirectTo: ''
+    redirectTo: 'home'
   }
 
 ];

@@ -15,7 +15,7 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
 export class HeaderComponent {
 
   @Output() openmodal = new EventEmitter<boolean>();
-  listItemsNavLinks = [{ name: 'Home', link: '' }, { name: 'Productos', link: 'productos' }, { name: 'Nuestra historia', link: 'history' }, { name: 'Ubicación', link: 'ubicacion' }];
+  listItemsNavLinks = [{ name: 'Home', link: '' }, { name: 'Productos', link: 'products' }, { name: 'Nuestra historia', link: 'history' }, { name: 'Ubicación', link: 'ubicacion' }];
   hiddeNavLinks: boolean = false;
 
   openModalSearchProduct() {

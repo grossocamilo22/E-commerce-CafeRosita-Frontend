@@ -3,14 +3,14 @@
     background-image: url("/assets/images/fondoPrincipal.png");
     min-height: 88vh;
     display: flex;
+    flex-wrap: wrap;
     justify-content: left;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: bottom right;
 
-
     & .home-text {
-        width: 40%;
+        flex: 650px 0  1;
         height: auto;
         padding: 5em 3em 0px;
         font-size: 1rem;
@@ -40,6 +40,15 @@
 
     .home {
         background-position: bottom center;
+    }
+
+}
+
+@media (min-width:80px) and (max-width:817px){
+    .home {
+        background-position: left center;
+        justify-content: center;
+    
     }
 
 }

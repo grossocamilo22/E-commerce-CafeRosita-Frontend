@@ -50,32 +50,44 @@
 
 }
 
-.section {
+.text-history-conatiner {
     position: relative;
-    margin-top: 2.5em;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    padding: 8px;
-    gap: 12px;
+    margin: 3em 0px;
 
-    & .first-text {
-        flex: 500px 0 1;
-        & > *{
-            font-weight: 500;
-            font-style: normal;
-            text-align: center;
-        }
-    }
-    
-    & .img-container {
-        flex: 500px 0 1;
+    & .section {
+        position: relative;
         display: flex;
         justify-content: center;
-        & .first-image-section{
-        width: 80%;
-        height: auto;
+        flex-wrap: wrap;
+        padding: 8px;
+
+        & .text-content {
+            flex: 500px 0 1;
+            padding: 10px;
+
+            &>p {
+                font-weight: 400;
+                font-style: normal;
+                text-align: justify;
+            }
+        }
+
+        & .img-content {
+            flex: 500px 0 1;
+            padding: 12px 10px;
+            display: grid;
+            background-size: cover;
+
+            & img {
+                height: auto;
+                max-width: 100%;
+                width: auto;
+            }
+
+            & .first-image-section {
+                align-self: center;
+            }
+
         }
     }
 }
