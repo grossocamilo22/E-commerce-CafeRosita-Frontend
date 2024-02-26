@@ -1,0 +1,16 @@
+mat-card{
+    position: relative;
+    padding: 12px;
+    width: inherit;
+    color: var(--main-color);
+
+    & label{
+        font-weight: bolder;
+    color: black;
+    }
+    
+
+    & .btn:hover{
+    color: var(--main-color);
+    }
+}

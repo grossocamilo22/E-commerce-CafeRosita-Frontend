@@ -10,45 +10,91 @@
     background-position: bottom right;
 
     & .home-text {
-        flex: 650px 0  1;
+        flex: 650px 0 1;
         height: auto;
         padding: 5em 3em 0px;
         font-size: 1rem;
         color: var(--main-color);
         margin: 0.5rem 0 1.4rem;
-        
-        &  h1{
+
+        & h1 {
             font-weight: 500;
             font-style: normal;
         }
+    }
+}
 
-        & .btn-principal {
-            padding: 10px 40px;
-            border-radius: 0.3rem;
-            background: var(--main-color);
-            color: white;
-            font-weight: 500;
+.history-container {
+    position: relative;
+    margin: 4em ;
+
+    & .history-content {
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+
+        & .text-content,
+        .img-content,
+        .btn-content {
+            flex: 550px 0 1;
+            padding: 8px;
         }
 
-        & .btn-principal:hover {
-            background: #8a6f4d;
+        & .btn-content {
+            display: flex;
+            justify-content: center;
+        }
+
+        & .img-content {
+            & img {
+                height: auto;
+                max-width: 100%;
+                width: auto;
+            }
+
+            & .first-image-section {
+                align-self: center;
+            }
         }
     }
+}
+
+.products-container{
+display: flex;
+flex-direction: column;
+align-items: center;
+gap: 12px;
+}
+
+.btn-principal {
+    padding: 10px 40px;
+    border-radius: 0.3rem;
+    background: var(--main-color);
+    color: white;
+    font-weight: 500;
+}
+
+.btn-principal:hover {
+    background: #8a6f4d;
 }
 
 @media (min-width: 818px) and (max-width:1110px) {
 
     .home {
         background-position: bottom center;
+        min-height: 92vh;
     }
 
 }
 
-@media (min-width:80px) and (max-width:817px){
+@media (min-width:80px) and (max-width:817px) {
     .home {
         background-position: left center;
         justify-content: center;
-    
+        min-height: 92vh;
+
     }
 
 }
