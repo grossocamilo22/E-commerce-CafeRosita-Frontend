@@ -1,0 +1,44 @@
+<section class="product-container">
+  <section class="images-container">
+    <img [src]="urlImages+product.img" alt="" class=" img-product">
+    <div class="images-row">
+      @for (productImg of product.images; track productImg.id) {
+      <div class="image-content">
+        <img class="img-product" [src]="urlImages+productImg.src ">
+      </div>
+      }
+    </div>
+  </section>
+  <section class="product-properties-container">
+
+    <h3 class="title-product">{{ product.name }}</h3>
+    <h3 class=" product-price ">{{ '$' + product.price }}</h3>
+    <div class="descrption-content">
+      <h4 class="">Descripción</h4>
+      <p class="">{{ product.description }}</p>
+    </div>
+    <div class="molienda-content">
+      <h4>Molienda:</h4>
+      <div class="label label-molido">
+        <mat-icon class="">blur_linear</mat-icon>
+        Molido
+      </div>
+    </div>
+    <div class="gram-content">
+      <h4>Peso:</h4>
+      <div class="label label-gram">
+        {{ product.amount }}
+      </div>
+    </div>
+    <div class="amount-content">
+      <h4>Cantidad:</h4>
+      <div class="amount-values">
+        <button>-</button>
+        <input type="text" value="2" disabled>
+        <button>+</button>
+      </div>
+    </div>
+    <button class="btn btn-principal">Agregar al carro
+      <mat-icon>add_shopping_cart</mat-icon></button>
+  </section>
+</section>

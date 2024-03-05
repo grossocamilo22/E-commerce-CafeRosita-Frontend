@@ -1,11 +1,11 @@
-<mat-card >
+<mat-card [ngClass]="{'mat-card-small':matCardSmall}">
     <img mat-card-image  alt="producto numero 1" [src]="'../../../../../assets/images'+product.img">
     <h3 class="mb-0 mt-2"> {{product.name}}</h3>
     <div class="col-md-12 text-center d-flex align-items-center justify-content-between mt-2 action-product  ">
         <label for="" > {{'$'+ product.price}} </label>
         <div class="d-inline">
             <button class="btn p-1" mat-icon-button matTooltip="Ver"
-                aria-label="Example icon-button with a heart icon" >
+                (click)="navigateToProduct()">
                     <mat-icon>visibility</mat-icon>
             </button>
         </div>

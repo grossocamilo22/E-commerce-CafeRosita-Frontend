@@ -6,6 +6,7 @@ import { CardProductComponent } from './components/card-product/card-product.com
 import {MatCardModule} from '@angular/material/card';
 import { MatIconModule } from "@angular/material/icon";
 import {MatTooltipModule} from '@angular/material/tooltip';
+import { RouterLink, RouterLinkActive } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,7 @@ import {MatTooltipModule} from '@angular/material/tooltip';
     CommonModule,
     MatCardModule,
     MatIconModule,
-    MatTooltipModule
+    MatTooltipModule,
   ],
   exports: [
     ParragraphHistoryComponent,

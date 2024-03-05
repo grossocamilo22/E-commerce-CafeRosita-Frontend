@@ -8,11 +8,15 @@ const routes: Routes = [
   },
   {
     path: 'history',
-    loadChildren:()=> import('../history/history.module').then(m=>m.HistoryModule)
+    loadChildren: () => import('../history/history.module').then(m => m.HistoryModule)
   },
   {
     path: 'products',
-    loadChildren: ()=> import('../products/products.module').then(m=>m.ProductsModule)
+    loadChildren: () => import('../products/products.module').then(m => m.ProductsModule)
+  },
+  {
+    path: 'product/:id',
+    loadChildren: () => import('../product/product.module').then(m => m.ProductModule)
   },
   {
     path: '**',//TODO 404 cuando no existe la ruta

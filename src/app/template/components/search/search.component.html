@@ -1,13 +1,16 @@
-<mat-card >
+<mat-card>
     <button class="btn-close-modal" (click)="closeModal()"><mat-icon >close</mat-icon></button>
     <mat-card-header [ngClass]="{'open-modal':modalOpened}">
         <mat-card-title>Buscar productos en nuestro sitio</mat-card-title>
         <mat-form-field class="custom-mat-form-field" >
-            <input matInput placeholder="Ingrese el nombre del producto">
+            <input matInput placeholder="Ingrese el nombre del producto" >
             <button class="btn-search" ><mat-icon >search</mat-icon></button>
           </mat-form-field>
     </mat-card-header>
-    <mat-card-content>
-        <p>Debes ingresar al menos dos caracteres</p>
+    <mat-card-content >
+        <!-- <p>Debes ingresar al menos dos caracteres</p> -->
+        @for (product of products; track product.name) {
+            <card-product [matCardSmall]="smallCardLetter" (closeModal)="closeModal()" [modalOpened]="true" [product]="product"/>
+        }
     </mat-card-content>
 </mat-card>

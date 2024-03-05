@@ -1,19 +1,29 @@
 <header class="header-content">
-    <div class="logo">
+    <div class="btn-nav-content">
+        <button class="btn-header btn-open-nav" (click)="openNav()"><i class="bi bi-list"></i></button>
+    </div>
+    <div class="logo-header">
         <img src="../../../assets/images/logo.png" alt="logo">
     </div>
-    <nav>
+    <nav [ngClass]="{'open-nav':navOpened}">
+        <div class="nav-header">
+            <div class="logo-nav">
+                <img src="../../../assets/images/logo-external.png" alt="logo">
+            </div>
+            <button class="btn-header btn-close-nav" (click)="openNav()"><i class="bi bi-x-lg"></i></button>
+        </div>
         <ul class="nav-links" [ngClass]="{'hidden-nav-links':hiddeNavLinks}">
             @for (item of listItemsNavLinks; track item.name) {
-            <li><a routerLink="/{{item.link}}">{{item.name}}</a><span class="links-line"></span></li>
+            <li><a (click)="navigate(item.link)" >{{item.name}}</a><span class="links-line"></span></li>
             }
         </ul>
     </nav>
     <div class="end-nav">
-        <a><button class="end-btn" matTooltip="Buscar" (click)="openModalSearchProduct()"><mat-icon>search</mat-icon></button></a>
-        <a routerLink="/auth" routerLinkActive="active"><button class="end-btn"
+        <a><button class="btn-header end-btn search-btn" matTooltip="Buscar"
+                (click)="openModalSearchProduct()"><mat-icon>search</mat-icon></button></a>
+        <a routerLink="/auth" routerLinkActive="active"><button class="btn-header end-btn"
                 matTooltip="Basic"><mat-icon>shopping_cart</mat-icon></button></a>
-        <a routerLink="/auth" routerLinkActive="active"><button class="end-btn"
+        <a routerLink="/auth" routerLinkActive="active"><button class="btn-header end-btn"
                 matTooltip="Login"><mat-icon>person</mat-icon></button></a>
     </div>
 </header>

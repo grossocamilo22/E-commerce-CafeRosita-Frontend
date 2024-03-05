@@ -5,7 +5,6 @@ import { HomeRoutingModule } from './home-routing.module';
 import { HomePagesComponent } from './pages/home-pages/home-pages.component';
 import { SharedModule } from '../../shared/shared.module';
 import { MainTemplateComponent } from '../../template/pages';
-import { SearchComponent } from './Components';
 
 
 
@@ -19,7 +18,6 @@ import { SearchComponent } from './Components';
     HomeRoutingModule,
     SharedModule,
     MainTemplateComponent,
-    SearchComponent
   ]
 })
 export class HomeModule { }

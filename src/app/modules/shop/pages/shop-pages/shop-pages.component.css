@@ -1,7 +1,7 @@
 .home {
     background-color: antiquewhite;
     background-image: url("/assets/images/fondoPrincipal.png");
-    min-height: 88vh;
+    min-height: calc(100vh - var(--header-large-size));
     display: flex;
     flex-wrap: wrap;
     justify-content: left;
@@ -26,8 +26,8 @@
 
 .history-container {
     position: relative;
-    margin: 4em ;
-
+    padding: 4em 8px;
+    
     & .history-content {
         position: relative;
         display: flex;
@@ -61,11 +61,11 @@
     }
 }
 
-.products-container{
-display: flex;
-flex-direction: column;
-align-items: center;
-gap: 12px;
+.products-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .btn-principal {
@@ -80,11 +80,13 @@ gap: 12px;
     background: #8a6f4d;
 }
 
+
+
 @media (min-width: 818px) and (max-width:1110px) {
 
     .home {
         background-position: bottom center;
-        min-height: 92vh;
+        min-height: calc(100vh - var(--header-short-size));
     }
 
 }
@@ -93,7 +95,7 @@ gap: 12px;
     .home {
         background-position: left center;
         justify-content: center;
-        min-height: 92vh;
+        min-height: calc(100vh - var(--header-short-size));
 
     }
 

@@ -1,7 +1,7 @@
 .products-title-container {
     display: flex;
     justify-content: center;
-    padding: 4em 8px 8px 8px;
+    margin-top: 4em;
     flex-direction: column;
     align-items: center;
     font-weight: 500;
@@ -15,15 +15,15 @@
 
 .products-container{
     display: flex;
+    margin-bottom: 2em;
     justify-content: center;
-    padding: 0px 4em ;
     .products-content {
+        padding: 8px;
         flex-direction: 1100px 0 1;
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
         justify-content: center;
         justify-items: start;
-        padding: 8px;
         gap: 8px;
             & .card-product {
                 padding: 8px;

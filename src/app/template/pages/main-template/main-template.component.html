@@ -1,5 +1,9 @@
-<section class="grid-areas">
-    <app-header class="header" (openmodal)="getValueModalSearchProduct($event)"/>
+<section #modal class="modal-window" [ngClass]="{'open-modal':openModalSearchProduct}">
+    <app-search-product class="card-search-product" [modalOpened]="openModalSearchProduct"
+        (closeModalSearchProduct)="openModalSearchProduct=$event" />
+</section>
+<section  class="grid-areas" [ngClass]="{'nav-open':navOpened,'card-search-open':openModalSearchProduct}">
+    <app-header class="header" (openmodal)="openModalSearchProduct = $event" (openNavAction)="navOpened = $event" />
     <div class="content">
         <router-outlet />
     </div>

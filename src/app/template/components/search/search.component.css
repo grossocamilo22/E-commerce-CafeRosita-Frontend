@@ -40,10 +40,13 @@ mat-card-header {
 
 mat-card-content {
     flex: 3;
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(190px, 1fr));
+    gap: 2em;
     overflow: auto;
     height: 250px;
     width: 60%;
-    padding: 0;
+    padding: 8px;
 
 }
 

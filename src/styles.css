@@ -1,16 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:wght@500&family=Roboto:wght@400;500;700&display=swap');
 
 html {
     box-sizing: border-box;
     font-size: 16px;
     --main-color: rgb(145, 80, 64);
     --font-color: #FBEED5;
+    --header-large-size:80px;
+    --header-short-size:60px;
 }
 
-*,
-*::before,
-*::after {
+*{
     box-sizing: inherit;
     padding: 0;
     margin: 0;
