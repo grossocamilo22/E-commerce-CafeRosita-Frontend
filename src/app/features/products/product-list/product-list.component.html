@@ -1,0 +1,12 @@
+<section class="products-header">
+    <h1>Productos</h1>
+    <p>Adquiere nuestros productos</p>
+</section>
+<section class="products-container">
+    <div class="products-content">
+        @for (product of products; track product.name) {
+                <card-product class="card-product" [product]="product" />
+        }
+
+    </div>
+</section>

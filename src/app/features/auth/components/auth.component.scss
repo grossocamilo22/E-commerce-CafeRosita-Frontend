@@ -1,0 +1,327 @@
+@import "variables";
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/mixins";
+
+/* Estilos del contenedor principal del formulario de autenticación */
+.container-auth-form {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $font-color;
+  min-height: 100vh;
+  $size: 38px;
+
+  /* Estilos del formulario de autenticación */
+  & .auth-form {
+    background-color: white;
+    position: relative;
+    display: grid;
+    width: 100%;
+    margin: 16px;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px -5px maroon;
+    text-align: center;
+    gap: 1.2em;
+    max-width: 450px;
+    padding: 1.3em 3em;
+
+    /* Estilos del párrafo dentro del formulario */
+    & .auth-form-paragraph {
+      font-weight: 300;
+    }
+
+    /* Estilos del enlace dentro del formulario */
+    & .auth-form-link {
+      font-weight: 400;
+      color: maroon;
+    }
+
+    /* Estilos del contenido del formulario */
+    & .auth-form-content {
+      display: grid;
+      gap: 1em;
+
+      /* Estilos del grupo de campos del formulario */
+      & .auth-form-group {
+        position: relative;
+        $color: #5757577e;
+
+        /* Estilo de los campos de entrada dentro del formulario */
+        & .auth-form-input {
+          width: 100%;
+          background: none;
+          color: #706c6c;
+          font-size: 1rem;
+          padding: 0.6em 0.3em;
+          border: none;
+          outline: none;
+          border-bottom: 1px solid $color;
+        }
+
+        /* Estilo de la línea animada al enfocar el campo de entrada */
+        & .auth-form-line {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          height: 1.5px;
+          background-color: $main-color;
+          transform: scale(0);
+          transform: left bottom;
+          transition: transform 0.6s;
+        }
+
+        /* La línea se expande al enfocar el campo de entrada */
+        & .auth-form-input:focus ~ .auth-form-line {
+          transform: scale(1);
+        }
+
+        /* Estilos para el mensaje de error debajo del campo de entrada */
+        & .auth-form-line-danger {
+          background-color: red;
+          transform: scale(0);
+          transform: left bottom;
+          transition: transform 0.6s;
+        }
+
+        /* La línea de error se expande al enfocar el campo de entrada */
+        & .auth-form-input:focus ~ .auth-form-line-danger {
+          transform: scale(1);
+        }
+
+        /* Estilos del Ícono dentro del campo */
+        & .auth-icon {
+          position: absolute;
+          top: 0;
+          right: 0;
+          display: flex;
+          gap: 0.4rem;
+          justify-content: center;
+          padding: 0.6em 0px;
+          cursor: pointer;
+          color: $main-color;
+        }
+
+        /* Estilos del Ícono de error */
+        & .auth-icon-error .mat-icon {
+          color: red;
+          pointer-events: none;
+        }
+
+        /* Estilos del mensaje de error */
+        & .auth-field-content-danger {
+          position: absolute;
+          top: 85%;
+          right: -127px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          max-width: 276px;
+          width: 100%;
+          opacity: 0;
+          visibility: hidden;
+          z-index: 0;
+          transition: opacity 0.6s ease-in-out, visibility 0.6s ease-in-out;
+
+          /* Estilos del triángulo del mensaje de error */
+          & span {
+            width: 0;
+            height: 0;
+            border-right: 5px solid transparent;
+            border-bottom: 7px solid #965555;
+            border-left: 5px solid transparent;
+          }
+
+          /* Estilos del texto del mensaje de error */
+          & .auth-text-danger {
+            padding: 0.6em 0.3em;
+            color: white;
+            background-color: #965555;
+          }
+        }
+
+        /* Muestra el mensaje de error al pasar el cursor */
+        .auth-icon-error:hover + .auth-field-content-danger {
+          opacity: 1;
+          visibility: visible;
+          z-index: 1;
+        }
+      }
+
+      /* Estilos del Grupo de checkboxes */
+      & .auth-form-check-group {
+        position: relative;
+        display: flex;
+        gap: 0.4rem;
+        justify-content: center;
+
+        /* Estilos de la etiqueta del checkbox */
+        & .auth-form-check-label {
+          margin-left: 5px;
+          font-weight: 400;
+          color: maroon;
+        }
+      }
+
+      /* Estilos del contenedor del divisor */
+      & .divider-container {
+        position: relative;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        line-height: 20px;
+
+        /* Estilo de la línea divisoria entre los elementos */
+        & .divider {
+          padding: 0 11px;
+        }
+      }
+
+      /* Líneas divisorias antes y después del contenido central */
+      & .divider-container::after,
+      .divider-container::before {
+        content: "";
+        position: absolute;
+        height: 1px;
+        width: 45%;
+        background-color: #e3e3e3;
+      }
+
+      /* La línea divisoria antes se coloca a la izquierda */
+      & .divider-container::after {
+        right: 0;
+      }
+
+      /* La línea divisoria después se coloca a la derecha */
+      & .divider-container::before {
+        left: 0;
+      }
+
+      /* Estilos del Contenedor para el botón de Google en el formulario */
+      & .form-google-submit-container {
+        display: flex;
+        justify-content: center;
+      }
+
+      /* Estilos del botón de envío del formulario */
+      & .btn-submit {
+        background-color: $main-color;
+        color: white;
+        font-weight: 300;
+        font-size: max(1em, 12px);
+        padding: 0.6em 0;
+        border: none;
+        border-radius: 0.5em;
+        cursor: pointer;
+      }
+    }
+
+    /* Contenido específico para el formulario de login */
+    & .auth-login-form-content {
+      gap: 1.3em;
+      margin-top: 3em;
+    }
+  }
+
+  /* Estilos específico para el formulario de login */
+  & .auth-login-form {
+    gap: 2em;
+    padding: 4.5em 3em;
+  }
+
+  & .form-title {
+    color: $main-color;
+    font-size: 2rem;
+  }
+
+  & .back-btn {
+    position: absolute;
+    text-align: center;
+    left: 0;
+    top: 0;
+    margin: 12px;
+    border: solid 1px $main-color;
+    border-radius: 25px;
+    color: $main-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: inherit;
+    height: $size;
+    width: $size;
+    cursor: pointer;
+  }
+
+  & .back-btn:hover {
+    color: gray;
+    border: solid 1px gray;
+  }
+}
+
+/* Ajustes para pantallas pequeñas y medianas (desde xs hasta md).
+   Reduce el tamaño de la fuente del párrafo para mejorar la legibilidad
+   en dispositivos más pequeños. */
+@include media-breakpoint-between(xs, md) {
+  .container-auth-form .auth-form {
+    /* Ajustes para el párrafo */
+    & .auth-form-paragraph {
+      font-weight: 300;
+      font-size: 0.9rem;
+    }
+
+    /* Ajustes para los grupos de campos */
+    & .auth-form-content {
+      gap: 1.4em;
+      & .auth-form-group {
+        position: relative;
+        $color: #5757577e;
+
+        /* Ajustes para los campos de entrada */
+        .auth-form-input {
+          padding: 0.4em 0.1em;
+          font-size: 0.75rem;
+        }
+
+        /* Ajustes para los íconos */
+        & .auth-icon {
+          padding: 0.4em 0.1em;
+
+          & .auth-icon-error,
+          .auth-icon-password {
+            font-size: 1em;
+          }
+        }
+
+        /* Ajustes para el mensaje de error */
+        .auth-field-content-danger {
+          position: absolute;
+          left: 0;
+          top: 100%;
+          right: 0;
+          align-items: start;
+          opacity: 1;
+          visibility: visible;
+          transition: none;
+
+          & span {
+            display: none;
+          }
+          & .auth-text-danger {
+            color: red;
+            padding: 0;
+            font-size: 0.62rem;
+            background-color: white;
+          }
+        }
+      }
+
+      /* Ajustes para las etiquetas de checkboxes */
+      & .auth-form-check-group .auth-form-check-label {
+        font-size: 0.7rem;
+      }
+    }
+  }
+}

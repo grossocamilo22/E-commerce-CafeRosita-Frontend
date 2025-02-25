@@ -1,0 +1,32 @@
+/* Estilos para el contenedor de contenido del pie de página */
+.footer-content {
+  height: 100%;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+
+  /* Estilos para los enlaces sociales dentro del pie de página */
+  & .social-links {
+    /* Estilos para los botones de tipo 'outline' */
+    & .btn-outline {
+      color: white;
+      border-color: white;
+      border-width: 2px;
+    }
+
+    /* Estilo para los botones cuando el cursor pasa por encima */
+    & .btn-outline:hover {
+      color: rgb(145, 80, 64);
+      background-color: white;
+    }
+  }
+
+  /* Estilos para la información de la empresa dentro del pie de página */
+  & .company-information {
+    text-align: center;
+    color: white;
+  }
+}

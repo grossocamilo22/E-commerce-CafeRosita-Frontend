@@ -1,0 +1,126 @@
+<div class="container-auth-form">
+  <div class="auth-form" [ngClass]="{ 'auth-login-form': isOnLoginPage }">
+    @if (!isOnLoginPage) {
+    <a class="back-btn" routerLink="login"
+      ><mat-icon>arrow_back</mat-icon></a
+    >
+    }
+    <h2 class="form-title">{{ titleAuthForm }}</h2>
+    <form
+      class="auth-form-content"
+      [ngClass]="{
+        'auth-login-form-content': isOnLoginPage
+      }"
+      [formGroup]="authForm"
+    >
+      @for (formAuthField of formAuthFields; track
+      formAuthField.formControlName) {
+      <div class="auth-form-group">
+        <input
+          [type]="formAuthField.type"
+          class="auth-form-input"
+          [formControlName]="formAuthField.formControlName"
+          [placeholder]="'Ingrese ' + formAuthField.label"
+          (focus)="applyValidationAttributes(form, formAuthField)"
+          #form
+        />
+        <i
+          class="auth-icon"
+          [ngClass]="{
+            'auth-icon-error': formValidationService.invalidField(
+              authForm,
+              formAuthField.formControlName
+            )
+          }"
+        >
+          <mat-icon
+            (click)="
+              togglePasswordFieldsState(
+                formAuthField,
+                formAuthField.formControlName
+              )
+            "
+          >
+            @if (formValidationService.invalidField( authForm,
+            formAuthField.formControlName )) { error_outline }@else { @if
+            (formAuthField.formControlName === 'password' ||
+            formAuthField.formControlName === 'confirmPassword') {
+            {{
+              !passwordVisibility[formAuthField.formControlName]
+                ? "visibility_off"
+                : "visibility"
+            }}
+            } }
+          </mat-icon>
+        </i>
+        <div
+          *ngIf="
+            formValidationService.invalidField(
+              authForm,
+              formAuthField.formControlName
+            )
+          "
+          class="auth-field-content-danger"
+        >
+          <span></span>
+          <small class="auth-text-danger">{{
+            formValidationService.formValidation(
+              authForm,
+              formAuthField.formControlName,
+              formAuthField.label
+            )
+          }}</small>
+        </div>
+        <span
+          class="auth-form-line"
+          [ngClass]="{
+            'auth-form-line-danger': formValidationService.invalidField(
+              authForm,
+              formAuthField.formControlName
+            )
+          }"
+        ></span>
+      </div>
+      } @if (isOnLoginPage) {
+      <a href="auth/registro" class="auth-form-link"
+        >¿Olvidaste tu contraseña?</a
+      >
+      }@else {
+      <div class="auth-form-check-group my-2">
+        <input
+          type="checkbox"
+          class="auth-form-check-input"
+          id="exampleCheck1"
+        />
+        <label class="auth-form-check-label" for="exampleCheck1"
+          >Aceptar condiciones y restricciones</label
+        >
+      </div>
+      }
+      <button type="submit" class="btn-submit">{{ submitButtonLabel }}</button>
+      @if (isOnLoginPage) {
+      <ng-container *ngTemplateOutlet="bottomPartLoginPage"></ng-container>
+      }
+    </form>
+  </div>
+</div>
+
+<ng-template #bottomPartLoginPage>
+  <div class="divider-container">
+    <span class="divider">o</span>
+  </div>
+  <div class="form-google-submit-container">
+    <div id="google-btn"></div>
+  </div>
+  <div>
+    <label class="auth-form-paragraph"
+      >¿No tienes una cuenta?
+      <a class="auth-form-link" routerLink="/auth/register"
+        >Registrarse</a
+      ></label
+    >
+    <label class="auth-form-paragraph mt-0"
+      >Volver al inicio <a class="auth-form-link" routerLink="/">Home</a></label
+    >
+  </div>
+</ng-template>

@@ -1,0 +1,151 @@
+@import 'variables';
+
+/* Contenedor principal del producto */
+.product-container {
+  position: relative;
+  display: flex;
+  margin: 2em 0px;
+  padding: 8px;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 3em;
+
+  /* Contenedor de imágenes del producto */
+  & .images-container {
+    flex: 500px 0 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+ 
+    /* Estilo para la imagen principal del producto */
+    & .img-product {
+      width: 100%;
+      height: auto;
+    }
+
+    /* Estilo para las filas de imágenes adicionales */
+    & .images-row {
+      padding: 8px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+
+      .image-content {
+        padding: 8px;
+        display: flex;
+        flex: 200px 0 1;
+
+        & img {
+          width: 100%;
+          height: auto;
+        }
+      }
+    }
+  }
+
+  /* Contenedor de las propiedades del producto */
+  & .product-properties-container {
+    flex: 500px 0 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1.6em;
+    padding: 8px;
+
+    /* Estilo para el título del producto */
+    & h3 {
+      padding: 0px;
+      margin: 0px;
+    }
+
+    & .title-product {
+      text-transform: uppercase;
+      font-family: "Noto Serif", serif;
+      font-size: 2.2rem;
+      font-weight: 500;
+      font-style: normal;
+      color: rgb(145, 80, 64);
+    }
+
+    /* Estilo para el texto descriptivo del producto */
+    & p {
+      text-align: justify;
+      margin: 0px;
+    }
+
+    /* Estilo para las etiquetas del producto */
+    & .label {
+      padding: 6px;
+      display: flex;
+      justify-content: center;
+      gap: 3px;
+      color: $font-color;
+      border-radius: 25px;
+      font-weight: 500;
+      font-style: normal;
+    }
+
+    /* Estilo específico para las etiquetas de molido y gramos */
+    & .label-molido {
+      width: 120px;
+      height: auto;
+      background-color: $main-color;
+    }
+
+    & .label-gram {
+      width: 100px;
+      height: auto;
+      background-color: $main-color;
+    }
+
+    /* Estilo para el contenedor de valores de cantidad */
+    & .amount-values {
+      display: flex;
+      height: 40px;
+
+      & > button,
+      input {
+        flex: 1;
+        text-align: center;
+        font-weight: 500;
+        font-style: normal;
+      }
+
+      & button {
+        border: solid 1px gray;
+        background-color: darkgray;
+      }
+
+      & input {
+        border: solid 1px gray;
+        border-width: 1px 0 1px 0px;
+      }
+    }
+
+    /* Estilo para el botón principal de acción */
+    & .btn-principal {
+      margin-top: 1em;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0.5em;
+      border-radius: 25px;
+      background: rgb(145, 80, 64);
+      color: white;
+      font-weight: 500;
+    }
+
+    & .btn-principal:hover {
+      background: #8a6f4d;
+    }
+  }
+}
+
+/* Media query para pantallas más pequeñas (de 80px a 1080px) */
+@media (min-width: 80px) and (max-width: 1080px) {
+  .product-container {
+    flex-wrap: wrap-reverse;
+  }
+}

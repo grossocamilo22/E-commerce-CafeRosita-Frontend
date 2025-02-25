@@ -1,0 +1,98 @@
+@import 'variables';
+
+/* Estilo para la sección de fondo de la introducción */
+.intro-background {
+  position: relative;
+  background-image: url("../../../assets/images/background-image-history.jpg");
+  min-height: 70vh;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right;
+
+  /* Contenedor del título con texto */
+  & .title-container-background {
+    flex: 1 1 500px;
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: $font-color;
+
+    & > * {
+      font-weight: 500;
+      font-style: normal;
+      text-align: center;
+    }
+
+    & .title {
+      font-size: 65px;
+      text-transform: capitalize;
+    }
+
+    & .text-backgrond {
+      font-size: 20px;
+      margin: 0px;
+    }
+  }
+
+  /* Contenedor del video */
+  & .video-container {
+    flex: 1 1 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .video-content {
+      padding: 2.7rem;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+/* Estilo para la sección de historia */
+.text-history-conatiner {
+  position: relative;
+  margin: 3em 0px;
+  
+  /* Contenedor de la sección con texto e imagen */
+  & .section {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 8px;
+
+    & .text-content {
+      flex: 500px 0 1;
+      padding: 10px;
+
+      & > p {
+        font-weight: 400;
+        font-style: normal;
+        text-align: justify;
+      }
+    }
+
+    & .img-content {
+      flex: 500px 0 1;
+      padding: 12px 10px;
+      display: grid;
+      background-size: cover;
+
+      & img {
+        height: auto;
+        max-width: 100%;
+        width: auto;
+      }
+
+      & .first-image-section {
+        align-self: center;
+      }
+    }
+  }
+}

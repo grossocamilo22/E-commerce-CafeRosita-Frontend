@@ -1,0 +1,95 @@
+@import "variables";
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/mixins";
+
+/* Contenedor principal de la cabecera de la ubicacion */
+.ubication-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2.5em;
+  padding: 0 2em 2em;
+  & .ubication-header {
+    font-style: normal;
+    text-align: center;
+    & h1{
+      font-size: 3.5em;
+      font-weight: 500;
+    }
+  }
+
+  & .ubication-content {
+    position: relative;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 1rem 4rem;
+
+    & .map {
+      padding: 1.5rem;
+      height: 400px;
+    }
+
+    & .ubication-info {
+      background-color: $main-color;
+      display: flex;
+      padding: 0.5rem;
+      flex-wrap: wrap;
+      height: 400px;
+
+      & article {
+        flex: 1 1 300px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.1rem;
+        color: $font-color;
+
+        & .bi {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: 30px !important;
+          width: 70px;
+          height: 70px;
+          border-radius: 50%;
+          border: 2px solid $font-color;
+        }
+        & h5,p {
+          margin: 0;
+        }
+      }
+    }
+
+    & .ubication-info,
+    .map {
+      flex: 1 1 300px;
+    }
+  }
+}
+
+@include media-breakpoint-between(xs, md) {
+  .ubication-container .ubication-content{
+    padding: 1rem;
+
+    & .ubication-info{
+      background-color: $font-color;
+      
+      & article{
+        color: black;
+
+        & .bi {
+          border: 2px solid black;
+        }
+      }
+    }
+
+  }
+
+
+}

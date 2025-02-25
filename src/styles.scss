@@ -1,0 +1,39 @@
+/* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif:wght@500&family=Roboto:wght@400;500;700&display=swap");
+
+
+/* Estilos globales que se aplican a todo el documento */
+html {
+  /* Configura el modelo de caja para que el tamaño de los elementos se calcule incluyendo padding y border */
+  box-sizing: border-box;
+  /* Define el tamaño de la fuente base para el documento */
+  font-size: 16px;
+}
+
+/* Estilos que se aplican a todos los elementos del documento */
+* {
+  /* Hereda la propiedad box-sizing de html para que todos los elementos consideren border y padding en el cálculo del tamaño */
+  box-sizing: inherit;
+  /* Elimina el padding predeterminado de todos los elementos */
+  padding: 0;
+  /* Elimina el margen predeterminado de todos los elementos */
+  margin: 0;
+  /* Define la fuente base para todo el documento, en este caso, "Roboto" */
+  font-family: "Roboto", sans-serif;
+  /* Define el peso de la fuente de forma predeterminada (normal) */
+  font-weight: 400;
+  /* Define que la fuente será normal (sin cursiva) */
+  font-style: normal;
+}
+
+/* Estilos para campos de texto con la clase mdc-text-field--filled cuando no están deshabilitados */
+.mdc-text-field--filled:not(.mdc-text-field--disabled) {
+  /* Establece el fondo blanco para los campos de texto que no están deshabilitados */
+  background-color: white !important;
+}
+
+/* Estilos para la capa de enfoque del formulario Material Design cuando está activada */
+.mat-mdc-form-field-focus-overlay {
+  /* Cambia el fondo del overlay de enfoque a un color gris muy claro */
+  background-color: #fafafa !important;
+}

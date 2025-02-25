@@ -1,0 +1,103 @@
+/* Estilos generales para el mat-card */
+mat-card {
+  padding: 20px;
+  align-items: center;
+  gap: 0;
+  border-radius: 0%;
+  width: 100%;
+  height: 520px;
+}
+
+/* Estilos para el encabezado del mat-card */
+mat-card-header {
+  position: relative;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  flex: 2;
+
+  /* Estilos para el título dentro del encabezado */
+  & mat-card-title {
+    position: absolute;
+    opacity: 0;
+    width: 100%;
+    left: 0;
+    top: -15px;
+    transition: opacity 1s ease-out, top 0.3s ease-in;
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    font-family: serif;
+  }
+
+  /* Estilos para el campo de busqueda dentro del encabezado */
+  & mat-form-field {
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+    bottom: 60px;
+    transition: opacity 0.3s ease-out, bottom 1s ease-in;
+    left: 0;
+  }
+}
+
+/* Estilos para el contenido dentro del mat-card */
+mat-card-content {
+  flex: 3;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+  gap: 2em;
+  overflow: auto;
+  height: 250px;
+  width: 60%;
+  padding: 8px;
+}
+
+/* Estilos para el botón de cerrar el modal */
+.btn-close-modal {
+  position: absolute;
+  top: 0;
+  align-self: end;
+  padding: 12px;
+  width: 30px;
+  border: none;
+  font-size: 20px;
+  font-weight: bold;
+  background-color: inherit;
+}
+
+/* Estilo para el botón de cerrar cuando se pasa el cursor sobre él */
+.btn-close-modal:hover {
+  color: red;
+}
+
+/* Estilos para el botón de búsqueda */
+.btn-search {
+  position: absolute;
+  right: 0;
+  top: 18px;
+  background-color: inherit;
+  border: none;
+}
+
+/* Estilo para el botón de búsqueda cuando se pasa el cursor sobre él */
+.btn-search:hover {
+  color: brown;
+}
+
+/* Estilos cuando el modal está abierto */
+.open-modal {
+
+  /* Animación para cuando el título del card aparece */
+  & mat-card-title {
+    top: 5px;
+    opacity: 1;
+  }
+  
+  /* Animación para cuando los campos del formulario aparecen */
+  & mat-form-field {
+    bottom: 0;
+    opacity: 1;
+  }
+}

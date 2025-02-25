@@ -1,0 +1,29 @@
+@import "variables";
+
+.video-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  & .spinner-border {
+    color: $font-color;
+    width: 4.2rem;
+    height: 4.2rem;
+  }
+
+  & .video {
+    display: none;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0.6s ease-out opacity 0.6s ease-out;
+  }
+
+  & .show-video {
+    display: block;
+    visibility: visible;
+    opacity: 1;
+  }
+}
